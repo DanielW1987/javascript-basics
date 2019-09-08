@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Throw custom errors</title>
+  <script>
+    function handleFormInput() {
+        document.getElementById("error").innerText = "";
+        try {
+            let age = document.getElementById("age").value;
+            validate(age);
+        }
+        catch (error) {
+            document.getElementById("error").innerText = error;
+        }
+    }
+
+    function validate(age) {
+        if (age === "") {
+            throw "Age cannot be empty!";
+        }
+        else if (age <= 18) {
+            throw "To young to vote!";
+        }
+    }
+  </script>
+</head>
+<body>
+  <label for="age">Age: </label>
+  <input type="text" id="age" />
+  <input type="button" onclick="handleFormInput()" value="Validate"/>
+  <p id="error"></p>
+</body>
+</html>

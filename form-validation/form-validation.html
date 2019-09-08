@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation</title>
+  <script>
+    function validate() {
+        let username = document.registerForm.username.value;
+        let email = document.registerForm.email.value;
+        let password = document.registerForm.password.value;
+        let country = document.registerForm.country.value;
+        let rememberMe = document.registerForm.rememberMe.checked;
+
+        console.log("Remember Me: " + rememberMe);
+
+        let regExp = new RegExp("^[A-Za-z]+$");
+
+        if (! regExp.test(username)) {
+            alert("Username is not valid!");
+            document.registerForm.username.focus();
+            return false;
+        }
+        else if (email.length === 0) {
+            alert("Email is mandatory!");
+            document.registerForm.email.focus();
+            return false;
+        }
+        else if (password.length === 0) {
+            alert("Password is mandatory!");
+            document.registerForm.password.focus();
+            return false;
+        }
+        else if (country.length === 0) {
+            alert("Country is mandatory!");
+            document.registerForm.country.focus();
+            return false;
+        }
+        else if (! validateFavouriteLanguage()) {
+            alert("Please select your favourite programming language!");
+            return false;
+        }
+        else {
+            alert("Validation successful!");
+            return true;
+        }
+    }
+
+    function validateFavouriteLanguage() {
+        let favouriteLanguage = document.registerForm.favouriteLanguage;
+
+        for (let index = 0; index < favouriteLanguage.length; index++) {
+            if (favouriteLanguage[index].checked) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+  </script>
+</head>
+<body>
+  <h1>User Registration</h1>
+  <form name="registerForm" action="#" onsubmit="return validate()" method="POST">
+    <label for ="username">Username: </label>
+    <input type="text" id="username" name="username" /><br />
+
+    <label for ="email">Email: </label>
+    <input type="text" id="email" name="email" /><br />
+
+    <label for ="password">Password: </label>
+    <input type="password" id="password" name="password" /><br />
+
+    <label for ="country">Country: </label>
+    <select id="country" name="country">
+      <option></option>
+      <option>Germany</option>
+      <option>France</option>
+      <option>United States</option>
+      <option>Spain</option>
+    </select><br />
+
+    <input type="radio" name="favouriteLanguage" id="java" />
+    <label for="java">Java</label>
+    <input type="radio" name="favouriteLanguage" id="kotlin" />
+    <label for="kotlin">Kotlin</label>
+    <input type="radio" name="favouriteLanguage" id="javascript" />
+    <label for="javascript">JavaScript</label>
+    <br />
+
+    <input type="checkbox" id="rememberMe" name="rememberMe" value="Remember Me"/>
+    <label for ="rememberMe">Remember Me</label><br />
+
+    <input type="submit" id="submit" name="submit" />
+  </form>
+
+</body>
+</html>

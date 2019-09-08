@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navigator</title>
+  <script>
+    document.write("App name: " + window.navigator.appName);
+    document.write("<br />");
+
+    document.write("App code name: " + window.navigator.appCodeName);
+    document.write("<br />");
+
+    document.write("App version: " + window.navigator.appVersion);
+    document.write("<br />");
+
+    document.write("Cookies enabled: " + window.navigator.cookieEnabled);
+    document.write("<br />");
+
+    document.write("Clipboard: " + window.navigator.clipboard.readText());
+    document.write("<br />");
+
+    document.write("do not track: " + window.navigator.doNotTrack);
+    document.write("<br />");
+
+    document.write("geolocation: " + window.navigator.geolocation);
+    document.write("<br />");
+
+    for (let navigatorProperty in window.navigator) {
+        document.write(navigatorProperty);
+        document.write("<br />");
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

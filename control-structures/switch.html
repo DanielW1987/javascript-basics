@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Switch Statement</title>
+  <script>
+    /*
+     * switch with number
+     */
+    let value = prompt("Enter a number between 1 and 3: ");
+    switch (value) {
+        case 1:
+            document.write("You entered 1");
+            break;
+        case 2:
+            document.write("You entered 2");
+            break;
+        case 3:
+            document.write("You entered 3");
+            break;
+        default:
+            document.write("You did not enter a value between 1 and 3!")
+    }
+
+
+    /*
+     * switch with strings
+     */
+    let name = prompt("Enter a name: ");
+    switch (name) {
+        case "John":
+            document.write("It's John");
+            break;
+        case "Mark":
+            document.write("It's Mark");
+            break;
+        case "Daniel":
+            document.write("It's Daniel");
+            break;
+        default:
+            document.write("No match!");
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrays</title>
+  <script>
+    /*
+     * Create an array
+     */
+    let myArray1 = new Array();
+    let myArray2 = Array();
+    let myArray3 = [];
+
+    /*
+     * initialize an array
+     * values of all types are allowed
+     */
+    let myArray4 = [2, 4.56, "John"];
+    let myArray5 = [];
+    myArray5[0] = "Hello";
+    myArray5[1] = ", ";
+    myArray5[2] = "World!";
+
+    /*
+     * print the array
+     */
+    document.write("The array: " + myArray4);
+    document.write("<br />");
+    document.write("Length of the array: " + myArray4.length);
+    document.write("<br />");
+
+    /*
+     * access specific element
+     */
+    document.write("element at index 1: " + myArray4[1]);
+    document.write("<br />");
+
+    /*
+     * Iterate an array
+     */
+    myArray5.forEach( (value, index, array) => {
+        document.write(index + ": " + value + "<br />");
+    });
+
+    /*
+     * concat an array
+     */
+    let myArray6a = ["John", "Maria", "Thomas"];
+    let myArray6b = ["Derek", "Martha", "Max"];
+
+    document.write("Concat an array: " + myArray6a.concat(myArray6b, "Daniel", "and so on..."));
+    document.write("<br />");
+
+    /*
+     * reverse an array
+     */
+    let myArray7 = ["Java", "Python", "Kotlin"];
+
+    document.write("Reverse an array: " + myArray7.reverse());
+    document.write("<br />");
+
+    /*
+     * join an array
+     */
+    let myArray8 = ["Apples", "Oranges", "Bananas"];
+
+    document.write("Join an array: " + myArray8.join(" - "));
+    document.write("<br />");
+
+
+    /*
+     * delete
+     */
+    let myArray9 = ["John", "Maria", "Thomas"];
+
+    document.write(myArray9 + "<br />");
+    delete myArray9[1];
+    document.write(myArray9 + "<br />");
+  </script>
+</head>
+<body>
+
+</body>
+</html>

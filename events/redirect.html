@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>redirect</title>
+  <script>
+    function waitAndRedirect(ms) {
+        setTimeout(redirect, ms);
+    }
+    function redirect() {
+        window.location = "https://www.google.com";
+    }
+  </script>
+</head>
+<body onload="waitAndRedirect(3000)">
+  <b>Redirecting</b>
+</body>
+</html>

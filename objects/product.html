@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product</title>
+  <script>
+      function Product(id, name, description, price) {
+          this.id = id;
+          this.name = name;
+          this.description = description;
+          this.price = price;
+          this.displayProductDetails = displayProductDetails;
+          this.calculateDiscount = calculateDiscount;
+      }
+
+      function displayProductDetails() {
+          document.write("Name: "+ this.name + "<br />");
+          document.write("Description: " + this.description + "<br />");
+          document.write("Calculated Discount: " + this.calculateDiscount(10) + "<br />");
+      }
+
+      function calculateDiscount(percentage) {
+          return this.price - (this.price * percentage / 100);
+      }
+
+      let product = new Product(1, "iFruit", "A high-end smartphone", 900);
+      product.displayProductDetails();
+  </script>
+</head>
+<body>
+
+</body>
+</html>

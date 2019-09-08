@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>onclick</title>
+  <script>
+    function calculate(buttonClicked) {
+      let calculationType = buttonClicked.name;
+      let num1            = parseInt(document.calcForm.num1.value);
+      let num2            =  parseInt(document.calcForm.num2.value);
+
+      switch (calculationType) {
+          case "Add":
+              document.calcForm.result.value = num1 + num2;
+              break;
+          case "Sub":
+              document.calcForm.result.value = num1 - num2;
+              break;
+          case "Mul":
+              document.calcForm.result.value = num1 * num2;
+              break;
+          case "Div":
+              document.calcForm.result.value = num1 / num2;
+              break;
+          case "Mod":
+              document.calcForm.result.value = num1 % num2;
+              break;
+          default:
+              document.calcForm.result.value = "snh";
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="calcForm">
+    <label for="num1">Number 1:</label>
+    <input type="text" id="num1" name="num1" /><br />
+
+    <label for="num2">Number 2:</label>
+    <input type="text" id="num2" name="num2" /><br />
+
+    <label for="result">Result:</label>
+    <input type="text" id="result" name="result" disabled/><br />
+
+    <input type="button" name="Add" value="Add" onclick="calculate(this)"/>
+    <input type="button" name="Sub" value="Sub" onclick="calculate(this)"/>
+    <input type="button" name="Mul" value="Mul" onclick="calculate(this)"/>
+    <input type="button" name="Div" value="Div" onclick="calculate(this)"/>
+    <input type="button" name="Mod" value="Mod" onclick="calculate(this)"/>
+  </form>
+</body>
+</html>

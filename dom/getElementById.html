@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Access HTML</title>
+  <script>
+    function onLoad() {
+        let paragraph = document.getElementById("paragraph");
+        paragraph.align = "center";
+        paragraph.style.color = "red";
+        paragraph.style.backgroundColor = "yellow";
+
+        document.getElementById("image").src = "img/pig2.jpg";
+    }
+  </script>
+</head>
+<body onload="onLoad()">
+  <p id="paragraph">My Paragraph</p>
+  <img id="image" src="img/pig1.jpeg" alt="Image" />
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>onmouseover / onmouseout</title>
+  <script>
+    function onMouseDown(element) {
+      element.style.color = "red";
+      element.style.background = "yellow";
+      element.innerText = "Mouse down";
+    }
+
+    function onMouseUp(element) {
+      element.style.color = "yellow";
+      element.style.background = "blue";
+      element.innerText = "Mouse up";
+    }
+  </script>
+</head>
+<body>
+  <!-- stop() and start() are default methods when using marquee -->
+  <marquee onmouseover="stop()" onmouseout="start()">
+    Start / Stop
+  </marquee>
+
+  <p onmousedown="onMouseDown(this)" onmouseup="onMouseUp(this)">
+    Mouse Down / Mouse Up
+  </p>
+</body>
+</html>

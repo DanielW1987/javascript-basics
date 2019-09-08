@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>try/catch</title>
+  <script>
+    try {
+        callUndefinedMethod();
+    }
+    catch (error) {
+        document.write("Within catch block...");
+        document.write("<br />");
+        document.write(error.message);
+        document.write("<br />");
+        document.write(error.messageerror);
+        document.write("<br />");
+        document.write(error.messageType);
+        document.write("<br />");
+    }
+
+    document.write("<br />");
+    document.write("After the error handling...");
+  </script>
+</head>
+<body>
+
+</body>
+</html>

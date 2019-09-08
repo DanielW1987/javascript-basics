@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create node / Remove node</title>
+  <script>
+    function handleRemove() {
+        let div = document.getElementsByTagName("div"); // returns an array of all div-elements
+        let p2 = document.getElementById("p2");
+
+        div[0].removeChild(p2);
+    }
+
+    function handleCreate() {
+        let div = document.getElementsByTagName("div"); // returns an array of all div-elements
+
+        let child = document.createElement("p");
+        let text = document.createTextNode("I am text...");
+        child.appendChild(text);
+
+        div[0].appendChild(child);
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <p id="p1">Lorem ipsum</p>
+    <p id="p2">Foobar</p>
+  </div>
+  <input type="button" value="Remove" onclick="handleRemove()"/>
+  <input type="button" value="Create" onclick="handleCreate()"/>
+</body>
+</html>

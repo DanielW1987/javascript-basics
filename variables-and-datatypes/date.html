@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Date</title>
+  <script>
+    function displayDateInfo() {
+        let myDate = new Date();
+        document.getElementById("dateInfo").innerText = myDate + "\n"
+            + "toLocaleTimeString: " + myDate.toLocaleTimeString() + "\n"
+            + "toLocaleDateString: " + myDate.toLocaleDateString() + "\n"
+            + "toLocaleString: " + myDate.toLocaleString() + "\n"
+            + "getHours: " + myDate.getHours() + "\n"
+            + "getMinutes: " + myDate.getMinutes() + "\n"
+            + "getSeconds: " + myDate.getSeconds() + "\n";
+    }
+
+  </script>
+</head>
+<body onload="displayDateInfo()">
+  <p id="dateInfo" onclick="displayDateInfo()"></p>
+</body>
+</html>

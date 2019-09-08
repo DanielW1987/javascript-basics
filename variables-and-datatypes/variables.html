@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Variables</title>
+    <script>
+
+      /*
+       * No need to declare a variable type.
+       * The same variable can be assigned values of different types.
+       * No scoping information in variable declaration.
+       * Variables and values can be "interrogated".
+       */
+
+      /*
+       * Variables with 'let' or 'var' (deprecated)
+       * It's possible to reassign values
+       */
+
+      // String type
+      let stringValue = "Hello World";
+
+      // Number type (all are floating type with 64 Bit precision
+      let value;
+      value = 42;
+      let decimalValue = 42.42;
+
+      // Boolean type
+      let booleanValue = true;
+
+
+
+      /*
+       * Constant type with 'const'
+       * A reassign is not possible
+       */
+      const constantValue = 1;
+      // constantValue = 2; // does not work
+
+
+      /*
+       * Weak Typing
+       */
+      let weakTypingValue = 1;
+      weakTypingValue = "a string"; // works fine
+
+
+       /*
+        * undefined and null
+        * All values without value are initially undefined
+        */
+      let undefinedValue;   // value is undefined
+      let nullValue = null; // value is null
+
+
+      /*
+       * typeof operator
+       */
+      let a;
+      console.log(typeof a);
+
+      a = 10;
+      console.log(typeof a);
+
+      a = "Hello";
+      console.log(typeof a);
+
+      a = true;
+      console.log(typeof a);
+
+      a = null;
+      console.log(typeof a);
+
+      /*
+       * == and === operator
+       * Negation: != and !==
+       */
+      let b = 10;
+      let c = "10";
+
+      if (b == c) { // '==' do type conversion
+          console.log("With using of '==' b is equal to c");
+      }
+
+      if (b === c) { // is false because c is a string
+          console.log("With using of '===' b is equal to c");
+      }
+
+      c = 10;
+      if (b === c) { // is true because c is a number
+          console.log("With using of '===' b is equal to c when c is a number");
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

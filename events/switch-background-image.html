@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    function handleOnChangeEvent(imageSrc) {
+        console.log(imageSrc);
+        document.body.style.backgroundImage = "url('" + imageSrc + "')";
+    }
+  </script>
+</head>
+<body>
+  <label for="imageChooser">Image:</label>
+  <select id="imageChooser" onchange="handleOnChangeEvent(this.value)">
+    <option value="">Select any Image</option>
+    <option value="img/pig1.jpeg">Pig 1</option>
+    <option value="img/pig2.jpg">Pig 2</option>
+    <option value="img/pig3.jpg">Pig 3</option>
+  </select>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closures</title>
+  <script>
+    function outerFunction() {
+        let a  = "Hello";
+
+        function closure() {
+            let b = "World";
+            document.write(a + " " + b);
+        }
+
+        return closure(); // will execute closure when outerFunction() is being called
+    }
+
+    outerFunction();
+    // closure(); // does not work
+  </script>
+</head>
+<body>
+
+</body>
+</html>

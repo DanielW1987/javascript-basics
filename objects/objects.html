@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Objects</title>
+  <script>
+
+    /*
+     * JavaScript is an object-oriented language, but it's not class-based.
+     * JavaScript object behaves like a Map in Java.
+     * Object literal notation to create objects.
+     * Object properties can be accessed directly (no getter and setters, always public).
+     * New properties can be added on object directly.
+     * Objects can have methods.
+     */
+    let myObj = {}; // simple object declaration; or new Object(), but it's deprecated
+    myObj.myProperty = "Hello";
+    myObj.myNumberValue = 123;
+    console.log("The value of the property 'myProperty' is: " +  myObj.myProperty);
+    console.log(myObj);
+
+    // object literal notation (json) / literal constructor
+    let emplyoee = {
+        firstName: "John",
+        lastName: "Doe",
+        level: "Senior",
+        job: "Java Developer",
+
+        // assign a function
+        displayDetails: function () {
+            console.log(this.firstName + " " + this.lastName + " (" + this.level + " " + this.job + ")");
+        }
+    };
+
+    console.log(emplyoee);
+    emplyoee.displayDetails();
+
+    /*
+     * print my name
+     */
+    let firstName = "John";
+    let lastName  = "Doe";
+    console.log(firstName + " " + lastName);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

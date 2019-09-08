@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom object creation</title>
+  <script>
+      /*
+       * custom object creation using function
+       */
+      function BlogPost(title, text) { // Constructor
+          this.title = title;
+          this.text = text;
+          this.addCategory = addCategory; // assign a function to object
+          this.displayBlogPostDetails = displayBlogPostDetails;
+      }
+
+      function addCategory(category) {
+          this.category = category;
+      }
+
+      function displayBlogPostDetails() {
+          document.write(this.title + "<br />");
+          document.write(this.text + "<br />");
+          document.write(this.category + "<br />");
+      }
+
+      let post = new BlogPost("JQuery", "Make JS easier to use");
+      post.addCategory("UI Technology");
+      post.displayBlogPostDetails();
+      // console.log(post.title + " | " + post.text);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

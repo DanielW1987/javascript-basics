@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Singleton Object</title>
+  <script>
+    let blogPost = new function() {
+        this.title = "Ruby on Rails";
+        this.text = "Rapid web development";
+        this.displayDetails = function () {
+            console.log(this.title + " | " + this.text);
+        }
+    };
+
+    blogPost.displayDetails();
+  </script>
+</head>
+<body>
+
+</body>
+</html>
